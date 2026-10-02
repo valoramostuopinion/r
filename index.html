@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reseñas</title>
+<script>
+// ===== LISTA DE CLIENTES =====
+// Para activar un cartel, agregá una línea: "codigo": "link de reseñas",
+const clientes = {
+  // "001": "https://search.google.com/local/writereview?placeid=XXXX",
+};
+// =============================
+
+const c = new URLSearchParams(location.search).get("c");
+if (c && clientes[c]) location.replace(clientes[c]);
+</script>
+<style>
+body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center}
+</style>
+</head>
+<body>
+<p>Cartel no activado.</p>
+</body>
+</html>
